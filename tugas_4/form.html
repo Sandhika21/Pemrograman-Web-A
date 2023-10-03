@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Registrasi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        function check(){
+            let txt = "";
+            let x = document.forms["Form"]["nama"].value;
+            if(x == ""){
+                txt = txt.concat("Bagian Nama tidak diisi", "\n")
+            }
+            x = document.forms["Form"]["nim"].value;
+            if(x == ""){
+                txt = txt.concat("Bagian NIM tidak diisi", "\n")
+            }
+            x = document.forms["Form"]["mk"].value;
+            if(x == ""){
+                txt = txt.concat("Bagian Mata Kuliah tidak diisi", "\n")
+            }
+            x = document.forms["Form"]["dosen"].value;
+            if(x == ""){
+                txt = txt.concat("Bagian Dosen tidak diisi", "\n")
+            }
+            
+            if(txt == ""){
+                window.alert("Registrasi Berhasil");
+            }
+            else{
+                window.alert(txt);
+            }
+        }
+    </script>
+</head>
+<body>    
+    <form name="Form" onsubmit="check()">
+        <h2>Form Registrasi</h2>
+        <br/>
+        <div class="text-box">
+            <label for="nama">Nama Mahasiswa</label>
+            <input type="text" name="nama" placeholder="San" list="nm">
+            <datalist id="nm">
+                <option value="Sandhika">
+                <option value="Surya">
+                <option value="Ardyanto">
+            </datalist>
+        </div>
+        <div class="text-box">
+            <label for="nim">NIM</label>
+            <input type="text" name="nim">
+        </div>
+        <div class="text-box">
+            <label for="mk">Mata Kuliah</label>
+            <input type="text" name="mk">
+        </div>
+        <div class="text-box">
+            <label for="dosen">Dosen</label>
+            <input type="text" name="dosen">
+        </div>        
+        <button type="submit" value="Submit">Submit</button>
+    </form>
+</body>
+</html>

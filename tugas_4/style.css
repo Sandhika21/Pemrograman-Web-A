@@ -1,0 +1,27 @@
+h2{
+    text-align: center;
+}
+
+form {
+    border: 1px solid gray;
+    background-color: yellow;
+    margin: auto;
+    height: 60%;
+    width: 30%;
+
+}
+
+.text-box {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    margin-left: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
